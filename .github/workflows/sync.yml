@@ -11,7 +11,7 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: ghcr.io/arkalim/kindle-to-notion:master
-          run: node /code/dist/main.js
+          run: node /src/main.ts
           options: |
             -v ${{ github.workspace }}:/code/resources 
             -e BOOK_DB_ID=${{ vars.BOOK_DB_ID }}
